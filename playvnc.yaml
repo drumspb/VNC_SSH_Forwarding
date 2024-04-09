@@ -1,0 +1,11 @@
+- name: Установка VNC и проброс портов для доступа за nat
+  hosts: localhost
+  become: true
+
+  task: 
+  - name: Установка xfce4 tightvncserver
+    package:
+      name: 
+        - xfce4 xfce4-goodies
+        - tightvncserver
+      state: present
